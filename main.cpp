@@ -35,15 +35,15 @@ int main() {
 // This function returns a struct filled with data from user 
 Restaurant getRestaurantInfo(){
     Restaurant temp;
-    cout << "Enter restaurant name: " << endl;
+    cout << "Enter restaurant name: ";
     cin >> temp.name; 
-    cout << "Enter restaurant cuisine: " << endl;
+    cout << "Enter restaurant cuisine: ";
     cin >> temp.cuisineType;
-    cout << "Enter restaurant city: " << endl;
+    cout << "Enter restaurant city: ";
     cin >> temp.city;
-    cout << "How many years the restaurant has been in business for: " << endl;
+    cout << "How many years the restaurant has been in business for: ";
     cin >> temp.yearsInBusiness;
-    cout << "Enter restaurant rating: " << endl;
+    cout << "Enter restaurant rating: ";
     cin >> temp.rating;
     return temp;
 }
