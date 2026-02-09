@@ -25,13 +25,14 @@ void displayRestaurantInfo(const Restaurant &rest);
 
 int main() {
     // Basic tests
-    Restaurant myRest = getRestaurantInfo();
-    cout << myRest.name << endl;
-    cout << myRest.city << endl;
+    for (int i = 0; i < 4; i++) {
+        cout << "Enter data for Restaurant " << (i + 1) << ": " << endl;
+        Restaurant tempRest = getRestaurantInfo();
+        displayRestaurantInfo(tempRest);
+    }
     return 0;
-
 }
-
+// This function returns a struct filled with data from user 
 Restaurant getRestaurantInfo(){
     Restaurant temp;
     cout << "Enter restaurant name: " << endl;
@@ -45,4 +46,14 @@ Restaurant getRestaurantInfo(){
     cout << "Enter restaurant rating: " << endl;
     cin >> temp.rating;
     return temp;
+}
+
+// This function displays restaurant info
+void displayRestaurantInfo(const Restaurant &rest) {
+    cout << "Restaurant info: " << endl;
+    cout << "Restaurant name: " << rest.name << endl;
+    cout << "Restaurant cuisine: " << rest.cuisineType << endl;
+    cout << "Restuarant city: " << rest.city << endl;
+    cout << "Restaurant years in business: " << rest.yearsInBusiness << endl;
+    cout << "Restaurant rating: " << rest.rating << endl;
 }
