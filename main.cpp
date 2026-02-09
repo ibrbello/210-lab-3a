@@ -24,13 +24,25 @@ Restaurant getRestaurantInfo();
 void displayRestaurantInfo(const Restaurant &rest);
 
 int main() {
+    // Basic tests
     Restaurant myRest = getRestaurantInfo();
-    cout << myRest.name;
+    cout << myRest.name << endl;
+    cout << myRest.city << endl;
     return 0;
+
 }
 
 Restaurant getRestaurantInfo(){
     Restaurant temp;
     cout << "Enter restaurant name: " << endl;
     cin >> temp.name; 
+    cout << "Enter restaurant cuisine: " << endl;
+    cin >> temp.cuisineType;
+    cout << "Enter restaurant city: " << endl;
+    cin >> temp.city;
+    cout << "How many years the restaurant has been in business for: " << endl;
+    cin >> temp.yearsInBusiness;
+    cout << "Enter restaurant rating: " << endl;
+    cin >> temp.rating;
+    return temp;
 }
